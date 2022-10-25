@@ -80,7 +80,8 @@ public class Patron implements Serializable {
 	    long loanId = loan.getId();
 		if (currentLoans.containsKey(loanId)) {
 		    finesOwing += loan.getFines();
-			currentLoans.remove(loanId);
+                    System.err.println("finesowed: "+ finesOwed());
+		    currentLoans.remove(loanId);
 		}
 		else {
 			throw new RuntimeException("No such loan held by member");

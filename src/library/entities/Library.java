@@ -225,7 +225,6 @@ public class Library implements Serializable {
                  damagedItems.put(itemId, item);
 		}
 		currentLoan.discharge(isDamaged);
-                System.err.println("patron.finesowed"+ patron.finesOwed());
 		currentLoans.remove(itemId);
 	}
 
