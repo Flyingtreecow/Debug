@@ -86,9 +86,10 @@ public class ReturnItemControl {
             ui.display(String.format("\nOverdue fine : $%.2f", overDueFine));
         }
         ui.display(String.format("\nTotal fines : $%.2f", totalFines));
-        
-        currentLoan.getPatron().incurFine(totalFines);
-		library.dischargeLoan(currentLoan, isDamaged);
+                 
+                currentLoan.getPatron().incurFine(totalFines);
+		System.err.println("Currentloan.getFines: "+currentLoan.getFines());
+                library.dischargeLoan(currentLoan, isDamaged);
 		
 		currentLoan = null;
 		ui.setReady();
