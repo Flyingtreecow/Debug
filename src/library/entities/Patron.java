@@ -99,7 +99,7 @@ public class Patron implements Serializable {
 
 
 	public void incurFine(double fine) {
-		finesOwing += fine;
+		finesOwing = fine;
 	}
 	
 	
