@@ -88,9 +88,7 @@ public class ReturnItemControl {
         ui.display(String.format("\nTotal fines : $%.2f", totalFines));
                  
                 currentLoan.getPatron().incurFine(totalFines);
-                
                 library.dischargeLoan(currentLoan, isDamaged);
-		System.err.println("Currentloan.getPatron().fineowed(): "+ currentLoan.getPatron().finesOwed());
 		currentLoan = null;
 		ui.setReady();
 		state = ControlState.READY;				
