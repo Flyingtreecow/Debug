@@ -26,27 +26,7 @@ public class Main {
 	private static Calendar calendar;
 	private static SimpleDateFormat simpleDateFormat;
 	
-	private static String MENU = """
-		Library Main Menu
-		
-			AP  : add patron
-			LP : list patrons
-		
-			AI  : add item
-			LI : list items
-			FI : fix item
-		
-			B  : borrow an item
-			R  : return an item
-			L  : list loans
-		
-			P  : pay fine
-		
-			T  : increment date
-			Q  : quit
-		
-		Choice : 
-		""";		
+	private static String MENU = "Library Main Menu \n \n AP  : add patron \n LP : list patrons \n \n AI  : add item \n LI : list items \n FI : fix item \n \n B  : borrow an item \n R  : return an item \n L  : list loans \n \n P  : pay fine \n \n T  : increment date \n Q  : quit \n Choice : ";		
 
 	
 	public static void main(String[] args) {		
@@ -130,7 +110,8 @@ public class Main {
 		output("\nEnded\n");
 	}	
 
-		private static void payFines() {
+	
+	private static void payFines() {
 		new PayFineUI(new PayFineControl()).run();		
 	}
 
@@ -193,14 +174,7 @@ public class Main {
 	private static void addItem() {
 		
 		ItemType itemType = null;
-		String typeMenu = """
-			Select item type:
-			    B : Book
-			    D : DVD video disk
-			    V : VHS video cassette
-			    C : CD audio disk
-			    A : Audio cassette
-			   Choice <Enter quits> : """;
+		String typeMenu = "Select item type: \n B : Book \n D : DVD video disk \n V : VHS video cassette \n C : CD audio disk \n A : Audio cassette \n Choice <Enter quits> : ";
 
 		while (itemType == null) {
 			String type = input(typeMenu);
