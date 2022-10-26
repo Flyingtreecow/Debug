@@ -108,9 +108,9 @@ public class BorrowItemControl {
 			completedList.add(loan);			
 		}
 		ui.display("Completed Loan Slip");
-		for (Loan loan : completedList) 
+		for (Loan loan : completedList){
 			ui.display(loan);
-		
+                }
 		ui.setCompleted();
 		state = ControlState.COMPLETED;
 	}
